@@ -6,29 +6,29 @@
 
   let question = -1;
   let type = 0;
-  function incrementQuestion(i) {
-    if (question < questions.length) {
-      question++;
-    } else {
-      type = i;
+  function incrementQuestion(value) {
+    if (question === questions.length - 1){
+      type = value
     }
+    question++;
   }
 </script>
 
 <style>
-  @font-face {
+  @font-face 
+  {
     font-family: "Harry-Potter";
-    src: url("/fonts/harry_potter.woff");
+    src: url("/fonts/harry_potter.woff")
   }
   h1 {
     font-family: "Harry-Potter, Serif";
   }
-  main {
+  main, h2 {
     font-family: sans-serif;
     text-align: center;
   }
   img {
-    width: 50%;
+    height: 300px;
   }
 </style>
 

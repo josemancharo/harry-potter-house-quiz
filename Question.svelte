@@ -21,29 +21,29 @@
 <h2>{title}</h2>
 
 {#if image}
-  <img src={image} alt = {image} width = 50% />
+  <img src={image} alt = {image} height="300px" />
 {/if}
 
-{#key value}
+{#key title}
   <ol type="A">
-  {#each options as option, i}
-  <li>
-    <input 
-      type="radio"
-      id="radio-{i}" 
-      name="drone"
-      value={i}
-      on:change={() => handleSelect(i)}
-      >
-    <label for="radio-{i}">{option}</label>
-  </li>
-  {/each}
+    {#each options as option, i}
+      <li>
+        <input 
+          type="radio"
+          id="radio-{i}" 
+          name="drone"
+          value={i}
+          on:change={() => handleSelect(i)}
+          >
+        <label for="radio-{i}">{option}</label>
+      </li>
+    {/each}
   </ol>
-{/key}
 
-<div id="next">
-  <button 
-    disabled={value === -1}
-    on:click={() => onNext(value)}
-    >Next</button>
-</div>
+  <div id="next">
+    <button 
+      disabled={value === -1}
+      on:click={() => onNext(value)}
+      >Next</button>
+  </div>
+{/key}

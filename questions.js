@@ -11,7 +11,7 @@ const questions = [
   },
   {
     title: "What animal do you relate to the most?",
-    options: ["Snake", "Winged Lion Bird", "Eagle", "Honey Badger"],
+    options: ["Snake", "Panthera leo", "Eagle", "Honey Badger"],
     image: "/assets/house-crests.jpg"
   },
   {

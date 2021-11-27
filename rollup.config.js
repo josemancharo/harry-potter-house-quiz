@@ -11,13 +11,16 @@ export default {
     sourcemap: true,
     format: "iife",
     name: "app",
-    file: "public/bundle.js"
+    file: "public/bundle.js",
+    compact: production
   },
   plugins: [
     svelte({
-      dev: !production,
-      css: (css) => {
-        css.write("public/bundle.css");
+      compilerOptions: {
+        dev: !production,
+        css: (css) => {
+          css.write("public/bundle.css");
+        }
       }
     }),
 
@@ -26,8 +29,12 @@ export default {
     swc({
       minify: production,
       jsc: {
-        target: "es2015"
-      }   
+        target: "es2019",
+        minify: {
+          compress: true,
+          mangle: true
+        }
+      }
     })
   ]
 };

@@ -11,7 +11,7 @@
   {:else if type === squib}
     Congrats! You are a squib!
   {:else}
-    We didn't know where to put you. Hufflepuff!
+    We didn't know where to put you. How about Hufflepuff?
   {/if}
 </h3>
 

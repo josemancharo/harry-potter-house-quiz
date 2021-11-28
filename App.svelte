@@ -9,7 +9,7 @@
   function incrementQuestion(value) {
     if (question === questions.length - 1){
       type = value
-
+      question++;
     }
     else {
       question++;
@@ -31,7 +31,7 @@
     text-align: center;
   }
   img {
-     width: 50%;
+    width: 50%;
   }
 </style>
 

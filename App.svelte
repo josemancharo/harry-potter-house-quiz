@@ -31,7 +31,7 @@
     text-align: center;
   }
   img {
-    height: 300px;
+     width: 50%;
   }
 </style>
 

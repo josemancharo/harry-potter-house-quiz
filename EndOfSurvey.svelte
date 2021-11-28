@@ -26,6 +26,6 @@
 
 <style>
   img {
-    height: 300px;
+    width: 50%;;
   }
 </style>

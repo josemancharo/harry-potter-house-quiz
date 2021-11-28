@@ -9,8 +9,11 @@
   function incrementQuestion(value) {
     if (question === questions.length - 1){
       type = value
+
     }
-    question++;
+    else {
+      question++;
+    }
   }
 </script>
 
@@ -33,7 +36,6 @@
 </style>
 
 <main>
-	
   {#if questions[question] }
     <Question 
       title={questions[question].title} 

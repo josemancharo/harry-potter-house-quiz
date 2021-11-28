@@ -18,13 +18,10 @@ export default {
     svelte({
       compilerOptions: {
         dev: !production,
-        css: (css) => {
-          css.write("public/bundle.css");
-        }
       }
     }),
 
-    resolve(),
+    resolve( {browser: true } ),
     css(),
     swc({
       minify: production,

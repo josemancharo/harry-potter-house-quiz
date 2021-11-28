@@ -1,19 +1,17 @@
 <script>
-  export let type;
-  $: type ??= 0
-  const hufflepuff = 2;
+  export let type = 0;
+
   const muggle = 1;
   const squib = 0;
 </script>
 
 <h3>
-  Congrats! You are a
   {#if type === muggle}
-    muggle!
+    Congrats! You are a muggle!
   {:else if type === squib}
-    squib!
+    Congrats! You are a squib!
   {:else}
-    Hufflepuff!
+    We didn't know where to put you. Hufflepuff!
   {/if}
 </h3>
 
@@ -25,8 +23,9 @@
   <img src="/assets/collin.jpg" alt="collin" />
 {/if}
 
+
 <style>
   img {
-    width: 50%;
+    height: 300px;
   }
 </style>
